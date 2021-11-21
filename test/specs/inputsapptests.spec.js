@@ -19,8 +19,13 @@ describe('My Inputs App', () => {
         console.log('first test');
         await expect(Inputspage.getTitle).toHaveTextContaining('Inputs');
     });
-    it('test that the application works'{
-        console.log('second test'),
-        await (Inputspage.gettextfield).toHaveTextContaining('number');
+    it('Locate subheader name', async () => {
+        console.log('second test');
+        await expect(Inputspage.getSubTitle).toHaveTextContaining('Number');
     });
- 
+    it('Add the value manually', async () => {
+        console.log('third test'),
+        await (Inputspage.addInNumberinTextBoxManually());
+        expect (InputsPage.getNumberTextBox).toHaveTextContaining('78');
+    });
+});
