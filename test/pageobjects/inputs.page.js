@@ -23,3 +23,4 @@ class Inputspage extends Page {
     }
 }
 export default new Inputspage();
+

@@ -29,3 +29,4 @@ describe('My Inputs App', () => {
         expect (InputsPage.getNumberTextBox).toHaveTextContaining('78');
     });
 });
+
