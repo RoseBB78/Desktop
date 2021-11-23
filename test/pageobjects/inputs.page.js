@@ -6,20 +6,21 @@ class Inputspage extends Page {
         return $('h3');
     }
 
-    get gettextfield(){
+    get getNumber() {
+        return $('p');
+    }
+
+    get gettextfield() {
         return $('input[type=number]');
     }
 
-    get getNumber(){
-        return $('p')
+    addNumber(){
+        const input = $('#content > div > div > div > input[type=number]');
+        return input.setValue("43");
     }
 
-    setInpuntsValuebyIndex(index){
-        return this.getInputs.selectByIndex(index);
-    }
-
-    currentSelected(){
-        return $('#inputs option[selected="selected"]');
+    currentInput(){
+        return $('#content > div > div > div > input[type=number]');
     }
 }
 export default new Inputspage();

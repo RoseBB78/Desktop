@@ -23,10 +23,10 @@ describe('My Inputs App', () => {
         console.log('second test');
         await expect(Inputspage.getSubTitle).toHaveTextContaining('Number');
     });
-    it('Add the value manually', async () => {
+    it('Add a number manually', async () => {
         console.log('third test'),
-        await (Inputspage.addInNumberinTextBoxManually());
-        expect (InputsPage.getNumberTextBox).toHaveTextContaining('78');
+        await (Inputspage.addNumber());
+        expect (InputsPage.currentInput()).toHaveTextContaining('43');
     });
 });
 
